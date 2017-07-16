@@ -26,14 +26,14 @@ class SlackAPI {
             if let error = err {
                 NSLog("slack API error: \(error)")
             }
-            
+
             if let httpResponse = response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 401:
                     NSLog("slack API returned an 'unauthorized' response. Did you set your token?")
                 default:
                     NSLog("slack API returned response: %d %@", httpResponse.statusCode, HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))
-                    
+
                     let result = (try? JSONSerialization.jsonObject(with: data!, options: [])) as? [String:AnyObject]
                     NSLog("Result", result!)
                 }
@@ -45,19 +45,19 @@ class SlackAPI {
     func sendPresence(presence: Presence) -> Void {
         let urlString = "https://slack.com/api/users.setPresence?token=\(token)&presence=\(presence)"
         let url = URL(string: "\(urlString)")
-        
+
         let task = URLSession.shared.dataTask(with: url!) { data, response, err in
             if let error = err {
                 NSLog("slack API error: \(error)")
             }
-            
+
             if let httpResponse = response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 401:
                     NSLog("slack API returned an 'unauthorized' response. Did you set your token?")
                 default:
                     NSLog("slack API returned response: %d %@", httpResponse.statusCode, HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode))
-                    
+
                     let result = (try? JSONSerialization.jsonObject(with: data!, options: [])) as? [String:AnyObject]
                     NSLog("Result", result!)
                 }
@@ -65,5 +65,4 @@ class SlackAPI {
         }
         task.resume()
     }
-
 }

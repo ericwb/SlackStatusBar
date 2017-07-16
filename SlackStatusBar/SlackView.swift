@@ -12,7 +12,7 @@ class SlackView: NSView {
     @IBOutlet weak var imageView: NSImageView!
     @IBOutlet weak var cityTextField: NSTextField!
     @IBOutlet weak var currentConditionsTextField: NSTextField!
-    
+
     func update(_ weather: String) {
         // do UI updates on the main thread
         DispatchQueue.main.async {

@@ -19,18 +19,18 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     override var windowNibName : String! {
         return "PreferencesWindow"
     }
-    
+
     override func windowDidLoad() {
         super.windowDidLoad()
 
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
         NSApp.activate(ignoringOtherApps: true)
-        
+
         let token = UserDefaults.standard.string(forKey: "token") ?? ""
         tokenTextField.stringValue = token
     }
-    
+
     func windowWillClose(_ notification: Notification) {
         let defaults = UserDefaults.standard
         defaults.setValue(tokenTextField.stringValue, forKey: "token")

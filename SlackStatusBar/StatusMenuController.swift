@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class StatusMenuController: NSObject, PreferencesWindowDelegate {    
+class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var slackView: SlackView!
 
@@ -23,9 +23,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     let slackAPI = SlackAPI()
-    
+
     var timer: Timer!
-    
+
     override func awakeFromNib() {
         let icon = NSImage(named: "slack")
         icon?.isTemplate = true // best for dark mode
@@ -46,10 +46,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         remoteMenuItem.isEnabled = false
         awayMenuItem = statusMenu.item(withTitle: "Away")
         awayMenuItem.isEnabled = false
-        
+
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
-        
+
         timer = Timer.scheduledTimer(
             timeInterval: 60,
             target: self,
@@ -65,11 +65,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
     @IBAction func autoClicked(_ sender: NSMenuItem) {
         sender.state = 1 - sender.state
-        
+
         if sender.state == 1 {
             // Turning auto mode ON
             slackAPI.sendPresence(presence: Presence.auto)
-        
+
             // Disable all actions (gray out menu items)
             meetingMenuItem.isEnabled = false
             commuteMenuItem.isEnabled = false
@@ -88,10 +88,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             )
         } else {
             // Turning auto mode OFF
-        
+
             // Disable timer
             timer.invalidate()
-        
+
             // Enable all callbacks
             meetingMenuItem.isEnabled = true
             commuteMenuItem.isEnabled = true
@@ -129,12 +129,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBAction func preferencesClicked(_ sender: NSMenuItem) {
         preferencesWindow.showWindow(nil)
     }
-    
+
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
     }
-    
+
     func preferencesDidUpdate() {
-        //updateWeather()
     }
 }
