@@ -1,2 +1,2 @@
-# SlackStatusBar
-Slack Status Bar Mac OS X app
+# Slack Status Bar App for Mac OS X
+
