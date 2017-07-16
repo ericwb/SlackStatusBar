@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A21862A21BCDEA2E00770E87 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21862A01BCDEA2E00770E87 /* PreferencesWindow.swift */; };
 		A21862A31BCDEA2E00770E87 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A21862A11BCDEA2E00770E87 /* PreferencesWindow.xib */; };
-		A2B4247D1BCDE3D300887CB2 /* SlackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B4247C1BCDE3D300887CB2 /* SlackView.swift */; };
 		A2D582281BCAAF37006A464B /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D582271BCAAF37006A464B /* StatusMenuController.swift */; };
 		A2D5822A1BCB6068006A464B /* SlackAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D582291BCB6068006A464B /* SlackAPI.swift */; };
 		A2DEB14E1BC9980E004AAEB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DEB14D1BC9980E004AAEB3 /* AppDelegate.swift */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		A21862A01BCDEA2E00770E87 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 		A21862A11BCDEA2E00770E87 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
-		A2B4247C1BCDE3D300887CB2 /* SlackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackView.swift; sourceTree = "<group>"; };
 		A2D582271BCAAF37006A464B /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		A2D582291BCB6068006A464B /* SlackAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlackAPI.swift; sourceTree = "<group>"; };
 		A2DEB14A1BC9980E004AAEB3 /* SlackStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlackStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,7 +104,6 @@
 				A2DEB14D1BC9980E004AAEB3 /* AppDelegate.swift */,
 				A2D582271BCAAF37006A464B /* StatusMenuController.swift */,
 				A2D582291BCB6068006A464B /* SlackAPI.swift */,
-				A2B4247C1BCDE3D300887CB2 /* SlackView.swift */,
 				A21862A01BCDEA2E00770E87 /* PreferencesWindow.swift */,
 				A2DEB1511BC9980E004AAEB3 /* MainMenu.xib */,
 				A21862A11BCDEA2E00770E87 /* PreferencesWindow.xib */,
@@ -271,7 +268,6 @@
 				A21862A21BCDEA2E00770E87 /* PreferencesWindow.swift in Sources */,
 				A2D582281BCAAF37006A464B /* StatusMenuController.swift in Sources */,
 				A2DEB14E1BC9980E004AAEB3 /* AppDelegate.swift in Sources */,
-				A2B4247D1BCDE3D300887CB2 /* SlackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

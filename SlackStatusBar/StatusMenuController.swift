@@ -10,7 +10,6 @@ import Cocoa
 
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
-    @IBOutlet weak var slackView: SlackView!
 
     var autoMenuItem: NSMenuItem!
     var meetingMenuItem: NSMenuItem!
@@ -33,7 +32,6 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         statusItem.menu = statusMenu
         statusItem.menu?.autoenablesItems = false
         autoMenuItem = statusMenu.item(withTitle: "Auto")
-        autoMenuItem.view = slackView
         meetingMenuItem = statusMenu.item(withTitle: "In a Meeting")
         meetingMenuItem.isEnabled = false
         commuteMenuItem = statusMenu.item(withTitle: "Commuting")
