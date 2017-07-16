@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SlackStatusBar" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="sS3-a3-GGc" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="SlackStatusBar" customModuleProvider="target">
+            <connections>
+                <outlet property="statusMenu" destination="qZp-Ad-uDX" id="XFG-js-aKj"/>
+            </connections>
+        </customObject>
+        <menu id="qZp-Ad-uDX">
+            <items>
+                <menuItem title="Location" id="CyZ-K7-RM6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="updateClicked:" target="sS3-a3-GGc" id="fiK-uK-iuP"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="9Bi-wd-Y5L"/>
+                <menuItem title="Auto" state="on" id="d2M-wS-o1T">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="autoClicked:" target="sS3-a3-GGc" id="6Fs-gE-Dn2"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="In a Meeting" image="spiral_calendar_pad" id="xkO-7G-PgZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="meetingClicked:" target="sS3-a3-GGc" id="1lo-Cd-0TC"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Commuting" image="bus" id="QH0-2N-QKC">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="commuteClicked:" target="sS3-a3-GGc" id="VRx-dd-6Zf"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Out Sick" image="face_with_thermometer" id="TtJ-SG-PLh">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="sickClicked:" target="sS3-a3-GGc" id="RcF-1V-OyV"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Vacationing" image="palm_tree" id="nfL-HB-UCV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="vacationClicked:" target="sS3-a3-GGc" id="JSn-Yd-t2m"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Working Remotely" image="house_with_garden" id="2sq-si-H0h">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="remoteClicked:" target="sS3-a3-GGc" id="R32-w9-9QK"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Away" image="NSStatusUnavailable" id="BgC-3s-v8L">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="awayClicked:" target="sS3-a3-GGc" id="Nvs-dg-zJJ"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="kKm-BS-Nw8"/>
+                <menuItem title="Preferences..." keyEquivalent="," id="gjQ-IK-ro7">
+                    <connections>
+                        <action selector="preferencesClicked:" target="sS3-a3-GGc" id="iUp-2D-yeF"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" keyEquivalent="q" id="k4N-2W-XAy">
+                    <connections>
+                        <action selector="quitClicked:" target="sS3-a3-GGc" id="Eue-jt-z1Q"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="46" y="261"/>
+        </menu>
+    </objects>
+    <resources>
+        <image name="NSStatusUnavailable" width="16" height="16"/>
+        <image name="bus" width="32" height="32"/>
+        <image name="face_with_thermometer" width="32" height="32"/>
+        <image name="house_with_garden" width="32" height="32"/>
+        <image name="palm_tree" width="32" height="32"/>
+        <image name="spiral_calendar_pad" width="32" height="32"/>
+    </resources>
+</document>
