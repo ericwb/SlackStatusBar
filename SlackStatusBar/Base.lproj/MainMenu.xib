@@ -22,9 +22,6 @@
             <items>
                 <menuItem title="Location" id="CyZ-K7-RM6">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="updateClicked:" target="sS3-a3-GGc" id="fiK-uK-iuP"/>
-                    </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="9Bi-wd-Y5L"/>
                 <menuItem title="Auto" state="on" id="d2M-wS-o1T">

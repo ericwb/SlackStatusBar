@@ -36,4 +36,9 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         defaults.setValue(tokenTextField.stringValue, forKey: "token")
         delegate?.preferencesDidUpdate()
     }
+
+    @IBAction func toolbarClicked(_ sender: NSToolbarItem) {
+        print(sender.label)
+    }
+
 }

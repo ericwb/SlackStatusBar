@@ -16,23 +16,14 @@
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="458" height="134"/>
+            <rect key="contentRect" x="196" y="240" width="533" height="352"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="458" height="134"/>
+                <rect key="frame" x="0.0" y="0.0" width="533" height="352"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-fJ-2o2">
-                        <rect key="frame" x="18" y="97" width="41" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Token" id="fSc-t9-hk4">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inb-kq-pQL">
-                        <rect key="frame" x="65" y="96" width="378" height="20"/>
+                        <rect key="frame" x="105" y="159" width="378" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="fl2-yk-51L">
                             <font key="font" metaFont="system"/>
@@ -40,12 +31,50 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-fJ-2o2">
+                        <rect key="frame" x="30" y="167" width="41" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Token" id="fSc-t9-hk4">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="838FBF45-3F01-4EB6-A1E3-64DE11EC1908" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="PGT-a4-yM7">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="8BD6F251-38CB-4717-AD90-B4BFEB3E4581" label="General" paletteLabel="General" tag="100" image="NSPreferencesGeneral" selectable="YES" id="mpY-DL-CfC">
+                        <connections>
+                            <action selector="toolbarClicked:" target="-2" id="x6y-bw-wHT"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="D3BD166E-144C-4692-9FE4-531409A175C9" label="Calendars" paletteLabel="Calendars" tag="200" image="spiral_calendar_pad" selectable="YES" id="S8Z-4o-Cmi">
+                        <connections>
+                            <action selector="toolbarClicked:" target="-2" id="g5l-oB-mJE"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6432435B-18D5-4A36-90B0-00EE90C424FD" label="Wi-Fi" paletteLabel="Wi-Fi" tag="300" image="wifi" selectable="YES" id="HsY-qd-UDe">
+                        <connections>
+                            <action selector="toolbarClicked:" target="-2" id="afo-x7-ahd"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="mpY-DL-CfC"/>
+                    <toolbarItem reference="S8Z-4o-Cmi"/>
+                    <toolbarItem reference="HsY-qd-UDe"/>
+                </defaultToolbarItems>
+            </toolbar>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="98" y="143"/>
+            <point key="canvasLocation" x="51" y="53"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+        <image name="spiral_calendar_pad" width="32" height="32"/>
+        <image name="wifi" width="80" height="80"/>
+    </resources>
 </document>
