@@ -9,6 +9,4 @@
 import Cocoa
 
 final class GeneralPaneController: NSViewController {
-    @IBOutlet weak var tokenTextField: NSTextField!
-
 }

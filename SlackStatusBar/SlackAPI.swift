@@ -14,7 +14,7 @@ enum Presence: String {
 }
 
 class SlackAPI {
-    let token = UserDefaults.standard.string(forKey: "token") ?? ""
+    let token = UserDefaults.standard.string(forKey: "values.token") ?? ""
 
     func sendStatus(statusText: String, statusEmoji: String) -> Void {
         let profile = "{ \"status_text\": \"\(statusText)\", \"status_emoji\": \"\(statusEmoji)\" }"
