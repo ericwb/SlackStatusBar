@@ -75,11 +75,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="jCf-UX-zIo">
-                                                            <rect key="frame" x="122" y="1" width="129.5" height="40"/>
+                                                            <rect key="frame" x="122" y="1" width="129" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kk-SF-F9Z">
-                                                                    <rect key="frame" x="0.0" y="23" width="129.5" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="129" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Ihs-eF-QRV">
                                                                         <font key="font" metaFont="system"/>
@@ -108,11 +108,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="cBV-g4-2Dh">
-                                                            <rect key="frame" x="254.5" y="1" width="240.5" height="40"/>
+                                                            <rect key="frame" x="254.5" y="1" width="240" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-TT-7S9">
-                                                                    <rect key="frame" x="0.0" y="23" width="240.5" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="240" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="KDN-md-ikF">
                                                                         <font key="font" metaFont="system"/>
@@ -132,7 +132,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Z5N-XV-Ife">
-                                    <rect key="frame" x="1" y="-15" width="0.0" height="15"/>
+                                    <rect key="frame" x="1" y="-16" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2o1-Ri-FGB">
@@ -144,15 +144,22 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
-                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jRK-v2-6qu">
-                                <rect key="frame" x="20" y="19" width="500" height="23"/>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYS-sf-WQB">
+                                <rect key="frame" x="86" y="20" width="434" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="smallSquare" trackingMode="selectOne" id="nSv-as-2Di">
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" refusesFirstResponder="YES" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wYu-Wb-hnq">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbX-GX-c9g">
+                                <rect key="frame" x="20" y="20" width="67" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="smallSquare" trackingMode="momentary" id="JoL-l7-1ue">
                                     <font key="font" metaFont="system"/>
                                     <segments>
-                                        <segment image="NSAddTemplate" imageScaling="none"/>
-                                        <segment image="NSRemoveTemplate" imageScaling="none" enabled="NO" selected="YES" tag="1"/>
-                                        <segment imageScaling="none" width="442"/>
+                                        <segment image="NSAddTemplate" width="32"/>
+                                        <segment image="NSRemoveTemplate" width="32" tag="1"/>
                                     </segments>
                                 </segmentedCell>
                             </segmentedControl>

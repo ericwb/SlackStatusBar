@@ -14,8 +14,6 @@
 		A2DEB14E1BC9980E004AAEB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DEB14D1BC9980E004AAEB3 /* AppDelegate.swift */; };
 		A2DEB1501BC9980E004AAEB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2DEB14F1BC9980E004AAEB3 /* Assets.xcassets */; };
 		A2DEB1531BC9980E004AAEB3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2DEB1511BC9980E004AAEB3 /* MainMenu.xib */; };
-		A2DEB15E1BC9980E004AAEB3 /* SlackStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DEB15D1BC9980E004AAEB3 /* SlackStatusBarTests.swift */; };
-		A2DEB1691BC9980E004AAEB3 /* SlackStatusBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DEB1681BC9980E004AAEB3 /* SlackStatusBarUITests.swift */; };
 		C8657B961F1C9B310008D32A /* GeneralPaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8657B951F1C9B310008D32A /* GeneralPaneController.swift */; };
 		C8657B981F1C9C340008D32A /* CalendarsPaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8657B971F1C9C340008D32A /* CalendarsPaneController.swift */; };
 		C8657B9A1F1C9C430008D32A /* WiFiPaneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8657B991F1C9C430008D32A /* WiFiPaneController.swift */; };
@@ -52,11 +50,7 @@
 		A2DEB1521BC9980E004AAEB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		A2DEB1541BC9980E004AAEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DEB1591BC9980E004AAEB3 /* SlackStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2DEB15D1BC9980E004AAEB3 /* SlackStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackStatusBarTests.swift; sourceTree = "<group>"; };
-		A2DEB15F1BC9980E004AAEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DEB1641BC9980E004AAEB3 /* SlackStatusBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlackStatusBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2DEB1681BC9980E004AAEB3 /* SlackStatusBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackStatusBarUITests.swift; sourceTree = "<group>"; };
-		A2DEB16A1BC9980E004AAEB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8657B951F1C9B310008D32A /* GeneralPaneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPaneController.swift; sourceTree = "<group>"; };
 		C8657B971F1C9C340008D32A /* CalendarsPaneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarsPaneController.swift; sourceTree = "<group>"; };
 		C8657B991F1C9C430008D32A /* WiFiPaneController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WiFiPaneController.swift; sourceTree = "<group>"; };
@@ -94,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				A2DEB14C1BC9980E004AAEB3 /* SlackStatusBar */,
-				A2DEB15C1BC9980E004AAEB3 /* SlackStatusBarTests */,
-				A2DEB1671BC9980E004AAEB3 /* SlackStatusBarUITests */,
 				A2DEB14B1BC9980E004AAEB3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,24 +121,6 @@
 				C89C0F061F947B7B00C972B3 /* WiFiPane.storyboard */,
 			);
 			path = SlackStatusBar;
-			sourceTree = "<group>";
-		};
-		A2DEB15C1BC9980E004AAEB3 /* SlackStatusBarTests */ = {
-			isa = PBXGroup;
-			children = (
-				A2DEB15D1BC9980E004AAEB3 /* SlackStatusBarTests.swift */,
-				A2DEB15F1BC9980E004AAEB3 /* Info.plist */,
-			);
-			path = SlackStatusBarTests;
-			sourceTree = "<group>";
-		};
-		A2DEB1671BC9980E004AAEB3 /* SlackStatusBarUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A2DEB1681BC9980E004AAEB3 /* SlackStatusBarUITests.swift */,
-				A2DEB16A1BC9980E004AAEB3 /* Info.plist */,
-			);
-			path = SlackStatusBarUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +273,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DEB15E1BC9980E004AAEB3 /* SlackStatusBarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +280,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2DEB1691BC9980E004AAEB3 /* SlackStatusBarUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

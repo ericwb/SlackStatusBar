@@ -24,5 +24,4 @@ final class WiFiPaneController: NSViewController {
         // ask user for deletion
         //self.deleteSetting(at: selectedRow)
     }
-
 }
