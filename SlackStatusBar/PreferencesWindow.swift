@@ -15,8 +15,6 @@ protocol PreferencesWindowDelegate {
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
     var delegate: PreferencesWindowDelegate?
 
-    @IBOutlet weak var tokenTextField: NSTextField!
-
     private let viewControllers: [NSViewController] = [
         "GeneralPane",
         "CalendarsPane",
@@ -29,13 +27,10 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-
         self.window?.center()
-        self.window?.makeKeyAndOrderFront(nil)
-        NSApp.activate(ignoringOtherApps: true)
-
-        //let token = UserDefaults.standard.string(forKey: "token") ?? ""
-        //tokenTextField.stringValue = token
+        guard let leftmostItem = self.window?.toolbar?.items.first else { return }
+        self.window?.toolbar?.selectedItemIdentifier = leftmostItem.itemIdentifier
+        self.toolbarClicked(leftmostItem)
     }
 
     func windowWillClose(_ notification: Notification) {

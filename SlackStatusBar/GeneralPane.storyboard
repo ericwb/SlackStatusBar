@@ -21,6 +21,9 @@
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <binding destination="bq1-ns-HTy" name="value" keyPath="values.token" id="Rdc-LZ-kKE"/>
+                                    </connections>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uC4-jo-5ei">
@@ -44,6 +47,7 @@
                     </view>
                 </viewController>
                 <customObject id="X2t-0N-ZQw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="bq1-ns-HTy"/>
             </objects>
             <point key="canvasLocation" x="-301" y="-300"/>
         </scene>

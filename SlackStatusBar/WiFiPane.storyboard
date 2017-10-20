@@ -14,14 +14,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="540" height="326"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-cc-nNq">
+                            <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="42" horizontalPageScroll="10" verticalLineScroll="42" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-cc-nNq">
                                 <rect key="frame" x="20" y="41" width="500" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="ifD-bf-qn3">
                                     <rect key="frame" x="1" y="0.0" width="498" height="264"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="Gmp-xd-W5L" viewBased="YES" id="UKR-Jb-snE">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="40" rowSizeStyle="automatic" headerView="Gmp-xd-W5L" viewBased="YES" id="UKR-Jb-snE">
                                             <rect key="frame" x="0.0" y="0.0" width="498" height="241"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -75,11 +75,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="jCf-UX-zIo">
-                                                            <rect key="frame" x="122" y="1" width="129" height="40"/>
+                                                            <rect key="frame" x="122" y="1" width="129.5" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Kk-SF-F9Z">
-                                                                    <rect key="frame" x="0.0" y="23" width="129" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="129.5" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Ihs-eF-QRV">
                                                                         <font key="font" metaFont="system"/>
@@ -94,7 +94,7 @@
                                                         </tableCellView>
                                                     </prototypeCellViews>
                                                 </tableColumn>
-                                                <tableColumn width="241.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="7UF-Ey-23J">
+                                                <tableColumn width="240.5" minWidth="10" maxWidth="3.4028234663852886e+38" id="7UF-Ey-23J">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Emoji">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -108,11 +108,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="cBV-g4-2Dh">
-                                                            <rect key="frame" x="254.5" y="1" width="241" height="40"/>
+                                                            <rect key="frame" x="254.5" y="1" width="240.5" height="40"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOb-TT-7S9">
-                                                                    <rect key="frame" x="0.0" y="23" width="241" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="23" width="240.5" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="KDN-md-ikF">
                                                                         <font key="font" metaFont="system"/>
@@ -132,7 +132,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Z5N-XV-Ife">
-                                    <rect key="frame" x="1" y="-16" width="0.0" height="16"/>
+                                    <rect key="frame" x="1" y="-15" width="0.0" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="2o1-Ri-FGB">
@@ -152,9 +152,7 @@
                                     <segments>
                                         <segment image="NSAddTemplate" imageScaling="none"/>
                                         <segment image="NSRemoveTemplate" imageScaling="none" enabled="NO" selected="YES" tag="1"/>
-                                        <segment imageScaling="none" width="442">
-                                            <nil key="label"/>
-                                        </segment>
+                                        <segment imageScaling="none" width="442"/>
                                     </segments>
                                 </segmentedCell>
                             </segmentedControl>
@@ -162,6 +160,7 @@
                     </view>
                 </viewController>
                 <customObject id="qcV-2E-ofF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="JnD-55-Ucq"/>
             </objects>
             <point key="canvasLocation" x="4" y="87"/>
         </scene>
