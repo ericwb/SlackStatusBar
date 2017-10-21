@@ -8,18 +8,13 @@
 
 import Cocoa
 
-protocol PreferencesWindowDelegate {
-    func preferencesDidUpdate()
-}
-
 class PreferencesWindow: NSWindowController, NSWindowDelegate {
-    var delegate: PreferencesWindowDelegate?
 
     private let viewControllers: [NSViewController] = [
         "GeneralPane",
         "CalendarsPane",
         "WiFiPane",
-        ].map { (name: String) -> NSViewController in NSStoryboard(name: name, bundle: nil).instantiateInitialController() as! NSViewController }
+    ].map { (name: String) -> NSViewController in NSStoryboard(name: name, bundle: nil).instantiateInitialController() as! NSViewController }
 
     override var windowNibName : String! {
         return "PreferencesWindow"
@@ -33,15 +28,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         self.toolbarClicked(leftmostItem)
     }
 
-    func windowWillClose(_ notification: Notification) {
-        //UserDefaults.standard.setValue(tokenTextField.stringValue, forKey: "token")
-        delegate?.preferencesDidUpdate()
-    }
-
     @IBAction func toolbarClicked(_ sender: NSToolbarItem) {
-        print(sender.label)
-        print(sender.tag)
-
         guard let window = self.window else { return }
 
         // detect clicked icon and select the view to switch

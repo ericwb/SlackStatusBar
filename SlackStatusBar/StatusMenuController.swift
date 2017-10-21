@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class StatusMenuController: NSObject, PreferencesWindowDelegate {
+class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
 
     var autoMenuItem: NSMenuItem!
@@ -46,7 +46,6 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         awayMenuItem.isEnabled = false
 
         preferencesWindow = PreferencesWindow()
-        preferencesWindow.delegate = self
 
         timer = Timer.scheduledTimer(
             timeInterval: 60,
@@ -130,8 +129,5 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
     @IBAction func quitClicked(_ sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
-    }
-
-    func preferencesDidUpdate() {
     }
 }
