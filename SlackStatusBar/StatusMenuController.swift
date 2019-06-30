@@ -20,7 +20,7 @@ class StatusMenuController: NSObject {
     var awayMenuItem: NSMenuItem!
     var preferencesWindow: PreferencesWindow!
 
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     let slackAPI = SlackAPI()
 
     var timer: Timer!
@@ -61,9 +61,9 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func autoClicked(_ sender: NSMenuItem) {
-        sender.state = 1 - sender.state
+        sender.state = convertToNSControlStateValue(1 - sender.state.rawValue)
 
-        if sender.state == 1 {
+        if sender.state.rawValue == 1 {
             // Turning auto mode ON
             slackAPI.sendPresence(presence: Presence.auto)
 
@@ -128,6 +128,11 @@ class StatusMenuController: NSObject {
     }
 
     @IBAction func quitClicked(_ sender: NSMenuItem) {
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToNSControlStateValue(_ input: Int) -> NSControl.StateValue {
+	return NSControl.StateValue(rawValue: input)
 }
