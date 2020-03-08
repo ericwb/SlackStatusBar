@@ -1,6 +1,0 @@
-os: osx
-osx_image: xcode8.3
-
-language: swift
-xcode_project: SlackStatusBar.xcodeproj
-xcode_scheme: SlackStatusBar
